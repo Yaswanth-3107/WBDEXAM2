@@ -385,7 +385,7 @@ router.post("/sendpasswordlink", async (req, res) => {
         from: "arvind.ang2020@gmail.com",
         to: email,
         subject: "sending Email for password Reset",
-        text: `This link is valid for 2 Minutes  http://localhost:3000/forgotpassword/${userfind.id}/${setusertoken.verifytoken}`,
+        text: `This link is valid for 2 Minutes  https://mydemocracy.onrender.com/forgotpassword/${userfind.id}/${setusertoken.verifytoken}`,
       };
       transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
@@ -589,7 +589,7 @@ router.post("/:id/:token", async (req, res) => {
 //       user1.state = state;
 //       user1.email = email;
 //       user1.district = district;
-     
+
 //       const userSaved = await user1.save();
 //       res.status(201).json({ status: 201, userSaved });
 //     }
@@ -597,7 +597,7 @@ router.post("/:id/:token", async (req, res) => {
 //     res.status(422).json(error);
 //     console.log("catch block error");
 //   }
-  
+
 // })
 
 module.exports = router;
