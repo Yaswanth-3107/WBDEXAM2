@@ -385,7 +385,7 @@ router.post("/sendpasswordlink", async (req, res) => {
         from: "yaswanthreddymaguluri@gmail.com",
         to: email,
         subject: "sending Email for password Reset",
-        text: `This link is valid for 2 Minutes  https://mydemocracy.onrender.com/forgotpassword/${userfind.id}/${setusertoken.verifytoken}`,
+        text: `This link is valid for 2 Minutes  http://localhost:3000/forgotpassword/${userfind.id}/${setusertoken.verifytoken}`,
       };
       transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
