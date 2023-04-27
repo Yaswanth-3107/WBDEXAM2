@@ -382,7 +382,7 @@ router.post("/sendpasswordlink", async (req, res) => {
 
     if (setusertoken) {
       const mailOptions = {
-        from: "arvind.ang2020@gmail.com",
+        from: "yaswanthreddymaguluri@gmail.com",
         to: email,
         subject: "sending Email for password Reset",
         text: `This link is valid for 2 Minutes  https://mydemocracy.onrender.com/forgotpassword/${userfind.id}/${setusertoken.verifytoken}`,
